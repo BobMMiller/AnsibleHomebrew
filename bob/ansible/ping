@@ -1,4 +1,9 @@
 ---
-- name: Test reachability to 192.168.1.15 using default vrf
-  cisco.ios.ios_ping:
-    dest: 192.168.1.15
+- hosts: switches
+  gather_facts: no
+  connection: local
+
+
+  - name: Test reachability to 192.168.1.15 using default vrf
+    cisco.ios.ios_ping:
+      dest: 192.168.1.15
