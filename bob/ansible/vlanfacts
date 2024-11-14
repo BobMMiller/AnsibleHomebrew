@@ -6,7 +6,8 @@
 - name: Connect to access switches
   hosts: switches
   gather_facts: false
-  connection: paramiko
+  vars_files:
+  - /home/bob/ansible/group_vars/switches.yml
 
   tasks:
   - name: show vlan
