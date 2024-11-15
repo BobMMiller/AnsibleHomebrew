@@ -3,8 +3,7 @@
   hosts: switches
   gather_facts: false
 
-  vars_files:
-  - group_vars/switches.yml
+
 
   tasks:
   - name: Ping/Pong
