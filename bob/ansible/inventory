@@ -1,6 +1,6 @@
 [switches]
-192.168.1.10
-192.168.1.15
+192.168.1.10 # BasementSwitch
+192.168.1.15 # GarageSwitch
 
 [switches:vars]
 ansible_connection=network_cli
