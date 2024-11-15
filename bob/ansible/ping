@@ -1,10 +1,12 @@
 ---
--name: ping
- hosts: switches
- gather_facts: no
- connection: local
+- name: test
+  hosts: switches
+  gather_facts: false
 
+  vars_files:
+  - /home/bob/ansible/group_vars/switches.yml
 
-- name: Test reachability to 192.168.1.15 using default vrf
-  cisco.ios.ios_ping:
-    dest: 192.168.1.15
+  tasks:
+  - name: Ping the router
+    cisco.ios.ios_ping:
+     dest: 192.168.1.1
