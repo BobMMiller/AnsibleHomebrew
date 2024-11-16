@@ -7,8 +7,6 @@
   hosts: switches
   gather_facts: false
   
-
-  
   tasks:
   - name: show vlan
     ios_command:
