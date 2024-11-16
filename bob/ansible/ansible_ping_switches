@@ -2,8 +2,12 @@
 - name: test
   hosts: switches
   gather_facts: false
+  
 
 
+  vars:
+    ansible_network_os: cisco.ios.ios
+    ansible_connection: network_cli
 
   tasks:
   - name: Ping/Pong
