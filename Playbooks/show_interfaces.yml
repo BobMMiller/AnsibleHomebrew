@@ -1,0 +1,19 @@
+---
+############################################################
+# Pulls down the existing interfaces database from a cisco switch
+############################################################
+
+- name: Connect to access switches
+  hosts: switches
+  gather_facts: false
+  
+  tasks:
+  - name: show interfaces
+    ios_command:
+      commands: 
+        - show interfaces
+      
+    register: show_interfaces
+
+  - debug: var=show_interfaces.stdout_lines
+  
