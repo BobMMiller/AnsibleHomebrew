@@ -9,16 +9,16 @@
   ARP type: ARPA, ARP Timeout 04:00:00
   Last input 00:00:00, output 00:00:00, output hang never
   Last clearing of "show interface" counters never
-  Input queue: 3/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Input queue: 2/75/0/0 (size/max/drops/flushes); Total output drops: 0
   Queueing strategy: fifo
   Output queue: 0/40 (size/max)
-  5 minute input rate 1000 bits/sec, 1 packets/sec
+  5 minute input rate 0 bits/sec, 0 packets/sec
   5 minute output rate 0 bits/sec, 0 packets/sec
-     5158682 packets input, 1252978931 bytes, 0 no buffer
+     5411877 packets input, 1315075060 bytes, 0 no buffer
      Received 0 broadcasts (0 IP multicasts)
      0 runts, 0 giants, 0 throttles
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     181377 packets output, 15604584 bytes, 0 underruns
+     190161 packets output, 16414464 bytes, 0 underruns
      0 output errors, 2 interface resets
      0 output buffer failures, 0 output buffers swapped out
 FastEthernet0 is down, line protocol is down 
@@ -52,7 +52,7 @@ GigabitEthernet0/1 is up, line protocol is up (connected)
   Hardware is Gigabit Ethernet, address is 2834.a254.4c01 (bia 2834.a254.4c01)
   Description: internet
   MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
+     reliability 255/255, txload 1/255, rxload 18/255
   Encapsulation ARPA, loopback not set
   Keepalive set (10 sec)
   Full-duplex, 1000Mb/s, media type is 10/100/1000BaseTX
@@ -63,15 +63,15 @@ GigabitEthernet0/1 is up, line protocol is up (connected)
   Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
   Queueing strategy: fifo
   Output queue: 0/40 (size/max)
-  5 minute input rate 209000 bits/sec, 7 packets/sec
-  5 minute output rate 22000 bits/sec, 10 packets/sec
-     1482957560 packets input, 1948329649546 bytes, 0 no buffer
-     Received 623246 broadcasts (37 multicasts)
+  5 minute input rate 73885000 bits/sec, 6263 packets/sec
+  5 minute output rate 1118000 bits/sec, 1797 packets/sec
+     1521167276 packets input, 1999386309827 bytes, 0 no buffer
+     Received 648716 broadcasts (37 multicasts)
      0 runts, 0 giants, 0 throttles
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
      0 watchdog, 37 multicast, 0 pause input
      0 input packets with dribble condition detected
-     492810630 packets output, 163074362710 bytes, 0 underruns
+     509983828 packets output, 166954544513 bytes, 0 underruns
      0 output errors, 0 collisions, 1 interface resets
      0 babbles, 0 late collision, 0 deferred
      0 lost carrier, 0 no carrier, 0 PAUSE output
@@ -118,15 +118,15 @@ GigabitEthernet0/3 is up, line protocol is up (connected)
   Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
   Queueing strategy: fifo
   Output queue: 0/40 (size/max)
-  5 minute input rate 4000 bits/sec, 3 packets/sec
-  5 minute output rate 5000 bits/sec, 5 packets/sec
-     12361499 packets input, 2349018282 bytes, 0 no buffer
-     Received 9128 broadcasts (5381 multicasts)
+  5 minute input rate 2000 bits/sec, 2 packets/sec
+  5 minute output rate 3000 bits/sec, 3 packets/sec
+     13084301 packets input, 2522544724 bytes, 0 no buffer
+     Received 10735 broadcasts (5739 multicasts)
      0 runts, 0 giants, 0 throttles
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 5381 multicast, 0 pause input
+     0 watchdog, 5739 multicast, 0 pause input
      0 input packets with dribble condition detected
-     26698321 packets output, 7536393626 bytes, 0 underruns
+     28126698 packets output, 7990131912 bytes, 0 underruns
      0 output errors, 0 collisions, 1 interface resets
      0 babbles, 0 late collision, 0 deferred
      0 lost carrier, 0 no carrier, 0 PAUSE output
@@ -281,15 +281,15 @@ GigabitEthernet0/9 is up, line protocol is up (connected)
   Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
   Queueing strategy: fifo
   Output queue: 0/40 (size/max)
-  5 minute input rate 1000 bits/sec, 1 packets/sec
-  5 minute output rate 3000 bits/sec, 3 packets/sec
-     17099560 packets input, 8600585429 bytes, 0 no buffer
-     Received 286998 broadcasts (219212 multicasts)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 2000 bits/sec, 2 packets/sec
+     17775641 packets input, 8858457910 bytes, 0 no buffer
+     Received 306438 broadcasts (235770 multicasts)
      0 runts, 0 giants, 0 throttles
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 219212 multicast, 0 pause input
+     0 watchdog, 235770 multicast, 0 pause input
      0 input packets with dribble condition detected
-     26606731 packets output, 15647665805 bytes, 0 underruns
+     27838088 packets output, 16013309194 bytes, 0 underruns
      0 output errors, 0 collisions, 1 interface resets
      0 babbles, 0 late collision, 0 deferred
      0 lost carrier, 0 no carrier, 0 PAUSE output
@@ -440,20 +440,20 @@ GigabitEthernet0/15 is up, line protocol is up (connected)
   Full-duplex, 1000Mb/s, media type is 10/100/1000BaseTX
   input flow-control is off, output flow-control is unsupported 
   ARP type: ARPA, ARP Timeout 04:00:00
-  Last input 00:00:22, output 00:00:00, output hang never
+  Last input 00:00:07, output 00:00:00, output hang never
   Last clearing of "show interface" counters never
   Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
   Queueing strategy: fifo
   Output queue: 0/40 (size/max)
   5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 2000 bits/sec, 3 packets/sec
-     74671264 packets input, 37971762993 bytes, 0 no buffer
-     Received 1613916 broadcasts (1463216 multicasts)
+  5 minute output rate 1000 bits/sec, 2 packets/sec
+     74958818 packets input, 38073742749 bytes, 0 no buffer
+     Received 1641827 broadcasts (1489894 multicasts)
      0 runts, 0 giants, 0 throttles
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 1463216 multicast, 0 pause input
+     0 watchdog, 1489894 multicast, 0 pause input
      0 input packets with dribble condition detected
-     147273174 packets output, 135195017698 bytes, 0 underruns
+     148688162 packets output, 135971425600 bytes, 0 underruns
      0 output errors, 0 collisions, 1 interface resets
      0 babbles, 0 late collision, 0 deferred
      0 lost carrier, 0 no carrier, 0 PAUSE output
@@ -499,15 +499,15 @@ GigabitEthernet0/17 is up, line protocol is up (connected)
   Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 109
   Queueing strategy: fifo
   Output queue: 0/40 (size/max)
-  5 minute input rate 6000 bits/sec, 1 packets/sec
-  5 minute output rate 4000 bits/sec, 4 packets/sec
-     22576343 packets input, 3326791020 bytes, 0 no buffer
-     Received 391881 broadcasts (251148 multicasts)
+  5 minute input rate 15000 bits/sec, 2 packets/sec
+  5 minute output rate 101000 bits/sec, 3 packets/sec
+     29928004 packets input, 4028574030 bytes, 0 no buffer
+     Received 427168 broadcasts (270313 multicasts)
      0 runts, 0 giants, 0 throttles
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 251148 multicast, 0 pause input
+     0 watchdog, 270313 multicast, 0 pause input
      0 input packets with dribble condition detected
-     50140056 packets output, 52113402147 bytes, 0 underruns
+     66192976 packets output, 74517555175 bytes, 0 underruns
      0 output errors, 0 collisions, 1 interface resets
      0 babbles, 0 late collision, 0 deferred
      0 lost carrier, 0 no carrier, 0 PAUSE output
@@ -555,15 +555,15 @@ GigabitEthernet0/19 is up, line protocol is up (connected)
   Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
   Queueing strategy: fifo
   Output queue: 0/40 (size/max)
-  5 minute input rate 41000 bits/sec, 11 packets/sec
-  5 minute output rate 77000 bits/sec, 12 packets/sec
-     60410155 packets input, 7636725271 bytes, 0 no buffer
-     Received 3114903 broadcasts (2996148 multicasts)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 1000 bits/sec, 1 packets/sec
+     62066925 packets input, 7887492925 bytes, 0 no buffer
+     Received 3273345 broadcasts (3150116 multicasts)
      0 runts, 0 giants, 0 throttles
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 2996148 multicast, 0 pause input
+     0 watchdog, 3150116 multicast, 0 pause input
      0 input packets with dribble condition detected
-     297461451 packets output, 414720925538 bytes, 0 underruns
+     305626016 packets output, 425359302733 bytes, 0 underruns
      0 output errors, 0 collisions, 1 interface resets
      0 babbles, 0 late collision, 0 deferred
      0 lost carrier, 0 no carrier, 0 PAUSE output
@@ -606,18 +606,18 @@ GigabitEthernet0/21 is up, line protocol is up (connected)
   ARP type: ARPA, ARP Timeout 04:00:00
   Last input never, output 00:00:00, output hang never
   Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 25629408
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 25894829
   Queueing strategy: fifo
   Output queue: 0/40 (size/max)
-  5 minute input rate 24000 bits/sec, 17 packets/sec
-  5 minute output rate 144000 bits/sec, 18 packets/sec
-     267409298 packets input, 110715938274 bytes, 0 no buffer
-     Received 2940404 broadcasts (1423132 multicasts)
+  5 minute input rate 19000 bits/sec, 3 packets/sec
+  5 minute output rate 49000 bits/sec, 2 packets/sec
+     274333655 packets input, 113329533946 bytes, 0 no buffer
+     Received 3082193 broadcasts (1473811 multicasts)
      0 runts, 0 giants, 0 throttles
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 1423132 multicast, 0 pause input
+     0 watchdog, 1473811 multicast, 0 pause input
      0 input packets with dribble condition detected
-     699684448 packets output, 832296720748 bytes, 0 underruns
+     712002795 packets output, 845200818973 bytes, 0 underruns
      0 output errors, 0 collisions, 1 interface resets
      0 babbles, 0 late collision, 0 deferred
      0 lost carrier, 0 no carrier, 0 PAUSE output
@@ -652,7 +652,7 @@ GigabitEthernet0/22 is down, line protocol is down (notconnect)
 GigabitEthernet0/23 is up, line protocol is up (connected) 
   Hardware is Gigabit Ethernet, address is 2834.a254.4c17 (bia 2834.a254.4c17)
   MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
+     reliability 255/255, txload 18/255, rxload 1/255
   Encapsulation ARPA, loopback not set
   Keepalive set (10 sec)
   Full-duplex, 1000Mb/s, media type is 10/100/1000BaseTX
@@ -663,15 +663,15 @@ GigabitEthernet0/23 is up, line protocol is up (connected)
   Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
   Queueing strategy: fifo
   Output queue: 0/40 (size/max)
-  5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 2000 bits/sec, 2 packets/sec
-     72131493 packets input, 6140455438 bytes, 0 no buffer
-     Received 27693 broadcasts (26507 multicasts)
+  5 minute input rate 1060000 bits/sec, 1781 packets/sec
+  5 minute output rate 73717000 bits/sec, 6244 packets/sec
+     72988244 packets input, 6270641117 bytes, 0 no buffer
+     Received 28879 broadcasts (27639 multicasts)
      0 runts, 0 giants, 0 throttles
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 26507 multicast, 0 pause input
+     0 watchdog, 27639 multicast, 0 pause input
      0 input packets with dribble condition detected
-     333608007 packets output, 482676331626 bytes, 0 underruns
+     337077105 packets output, 486904221245 bytes, 0 underruns
      0 output errors, 0 collisions, 1 interface resets
      0 babbles, 0 late collision, 0 deferred
      0 lost carrier, 0 no carrier, 0 PAUSE output
@@ -897,4 +897,4 @@ Fa0                          notconnect   routed       auto   auto 10/100BaseTX'
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 GarageSwitch.bob.home
-                 Gig 0/15          155             R S I  WS-C3560C Gig 1/0/13']
+                 Gig 0/15          168             R S I  WS-C3560C Gig 1/0/13']
