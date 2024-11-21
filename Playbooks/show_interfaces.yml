@@ -12,8 +12,14 @@
     ios_command:
       commands: 
         - show interfaces
+        - show interface status
+        - show cdp neighbor
+      
       
     register: show_interfaces
 
-  - debug: var=show_interfaces.stdout_lines
+  - name: save output to local directory
+    copy:
+      content: "{{ show_interfaces.stdout | replace('\\n', '\n') }}"
+      dest: /home/bob/ansible/outputs/{{inventory_hostname}}_interfaces.ios
   
