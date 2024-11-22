@@ -13,8 +13,5 @@ ansible_network_cli_ssh_type=auto
 [proxmox]
 192.168.1.21
 
-[linux]
-192.168.1.254
-
 [edgeos]
 192.168.1.1
