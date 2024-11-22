@@ -9,9 +9,3 @@ ansible_port=22
 ansible_ssh_user=bob
 ansible_become_method=enable
 ansible_network_cli_ssh_type=auto
-
-[proxmox]
-192.168.1.21
-
-[edgeos]
-192.168.1.1
