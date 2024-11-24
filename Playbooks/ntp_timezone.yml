@@ -1,0 +1,28 @@
+---
+- name: Configure Clock Timezone and Summertime on Cisco IOS
+  hosts: switches
+  connection: network_cli
+  gather_facts: false
+  tasks:
+   #Set timezone CST and summertime
+   - name: Timezome and summertime
+     ios_config:
+        lines:
+            #Configuration commands                         
+          - clock timezone CST -6
+          - clock summer-time CST recurring
+   #Saving the configurations on start-config
+   - name: Save running-config to start-config
+     ios_config:
+       save_when: modified
+   #Get retur output from the show commands
+   - name: "Get clock configurations"
+     register: get_clock_config
+     ios_command:
+       commands:
+          - "show running-config | include clock timezone"
+          - "show running-config | include clock summer-time"
+  #Output final results on the device run and start-config. 
+   - name: Show finally configurations on device
+     debug:
+      var: get_clock_config.stdout
