@@ -8,16 +8,16 @@
   ARP type: ARPA, ARP Timeout 04:00:00
   Last input 00:00:00, output 00:00:00, output hang never
   Last clearing of "show interface" counters never
-  Input queue: 3/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Input queue: 4/75/0/0 (size/max/drops/flushes); Total output drops: 0
   Queueing strategy: fifo
   Output queue: 0/40 (size/max)
   5 minute input rate 0 bits/sec, 0 packets/sec
   5 minute output rate 0 bits/sec, 0 packets/sec
-     5453826 packets input, 1323861789 bytes, 0 no buffer
+     5849378 packets input, 1414605941 bytes, 0 no buffer
      Received 0 broadcasts (0 IP multicasts)
      0 runts, 0 giants, 0 throttles 
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     48348 packets output, 5069185 bytes, 0 underruns
+     54212 packets output, 5794993 bytes, 0 underruns
      0 output errors, 2 interface resets
      0 unknown protocol drops
      0 output buffer failures, 0 output buffers swapped out
@@ -170,20 +170,20 @@ GigabitEthernet1/0/6 is up, line protocol is up (connected)
   Full-duplex, 100Mb/s, media type is 10/100/1000BaseTX
   input flow-control is off, output flow-control is unsupported 
   ARP type: ARPA, ARP Timeout 04:00:00
-  Last input never, output 00:00:01, output hang never
+  Last input never, output 00:00:00, output hang never
   Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 4748
   Queueing strategy: fifo
   Output queue: 0/40 (size/max)
   5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 1000 bits/sec, 1 packets/sec
-     79636 packets input, 12668453 bytes, 0 no buffer
-     Received 1171 broadcasts (829 multicasts)
+  5 minute output rate 2000 bits/sec, 1 packets/sec
+     79672 packets input, 12675615 bytes, 0 no buffer
+     Received 1207 broadcasts (855 multicasts)
      0 runts, 0 giants, 0 throttles 
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 829 multicast, 0 pause input
+     0 watchdog, 855 multicast, 0 pause input
      0 input packets with dribble condition detected
-     3849282 packets output, 935957803 bytes, 0 underruns
+     4836286 packets output, 1101567991 bytes, 0 underruns
      0 output errors, 0 collisions, 1 interface resets
      0 unknown protocol drops
      0 babbles, 0 late collision, 0 deferred
@@ -226,7 +226,7 @@ GigabitEthernet1/0/8 is down, line protocol is down (err-disabled)
   Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
   input flow-control is off, output flow-control is unsupported 
   ARP type: ARPA, ARP Timeout 04:00:00
-  Last input 6w1d, output 6w1d, output hang never
+  Last input 7w0d, output 7w0d, output hang never
   Last clearing of "show interface" counters never
   Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 49
   Queueing strategy: fifo
@@ -311,20 +311,20 @@ GigabitEthernet1/0/11 is up, line protocol is up (connected)
   Full-duplex, 1000Mb/s, media type is 10/100/1000BaseTX
   input flow-control is off, output flow-control is unsupported 
   ARP type: ARPA, ARP Timeout 04:00:00
-  Last input never, output 00:00:01, output hang never
+  Last input never, output 00:00:00, output hang never
   Last clearing of "show interface" counters never
   Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
   Queueing strategy: fifo
   Output queue: 0/40 (size/max)
   5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 1000 bits/sec, 1 packets/sec
-     73406551 packets input, 37823273122 bytes, 0 no buffer
-     Received 1426289 broadcasts (1275391 multicasts)
+  5 minute output rate 2000 bits/sec, 1 packets/sec
+     74712774 packets input, 38554587544 bytes, 0 no buffer
+     Received 1485436 broadcasts (1321825 multicasts)
      0 runts, 0 giants, 0 throttles 
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 1275391 multicast, 0 pause input
+     0 watchdog, 1321825 multicast, 0 pause input
      0 input packets with dribble condition detected
-     144458956 packets output, 131467922954 bytes, 0 underruns
+     147540268 packets output, 133784734557 bytes, 0 underruns
      0 output errors, 0 collisions, 1 interface resets
      0 unknown protocol drops
      0 babbles, 0 late collision, 0 deferred
@@ -368,20 +368,20 @@ GigabitEthernet1/0/13 is up, line protocol is up (connected)
   Full-duplex, 1000Mb/s, media type is 10/100/1000BaseTX
   input flow-control is off, output flow-control is unsupported 
   ARP type: ARPA, ARP Timeout 04:00:00
-  Last input 00:00:00, output 00:00:07, output hang never
+  Last input 00:00:00, output 00:00:09, output hang never
   Last clearing of "show interface" counters never
   Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
   Queueing strategy: fifo
   Output queue: 0/40 (size/max)
-  5 minute input rate 1000 bits/sec, 1 packets/sec
+  5 minute input rate 2000 bits/sec, 2 packets/sec
   5 minute output rate 0 bits/sec, 0 packets/sec
-     148688113 packets input, 135971422310 bytes, 0 no buffer
-     Received 13587452 broadcasts (10973914 multicasts)
+     152033142 packets input, 138304980123 bytes, 0 no buffer
+     Received 14746994 broadcasts (11928844 multicasts)
      0 runts, 0 giants, 0 throttles 
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 10973914 multicast, 0 pause input
+     0 watchdog, 11928844 multicast, 0 pause input
      0 input packets with dribble condition detected
-     74958768 packets output, 38073733421 bytes, 0 underruns
+     76273803 packets output, 38808715199 bytes, 0 underruns
      0 output errors, 0 collisions, 1 interface resets
      0 unknown protocol drops
      0 babbles, 0 late collision, 0 deferred
@@ -396,7 +396,7 @@ GigabitEthernet1/0/14 is down, line protocol is down (notconnect)
   Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
   input flow-control is off, output flow-control is unsupported 
   ARP type: ARPA, ARP Timeout 04:00:00
-  Last input 6w3d, output 6w2d, output hang never
+  Last input 7w3d, output 7w1d, output hang never
   Last clearing of "show interface" counters never
   Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
   Queueing strategy: fifo
@@ -546,6 +546,6 @@ Te1/0/2                      notconnect   1            full    10G Not Present',
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 BasementSwitch.bob.home
-                 Gig 1/0/13        145              S I   WS-C3560X Gig 0/15
+                 Gig 1/0/13        155              S I   WS-C3560X Gig 0/15
 
 Total cdp entries displayed : 1']
