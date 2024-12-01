@@ -13,4 +13,9 @@
      dest: 192.168.1.1
      count: 100
 
-  - debug: 
+    register: output
+
+  - name: save output to local directory
+    copy:
+      content: "{{ output }}"
+      dest: /home/bob/ansible/outputs/{{inventory_hostname}}ping.ios
