@@ -1,0 +1,19 @@
+---
+############################################################
+# Pulls down the existing vlan database from a cisco switch
+############################################################
+
+- name: Connect to access switches
+  hosts: switches
+  gather_facts: false
+  
+  tasks:
+  - name: show vlan
+    ios_command:
+      commands: 
+        - show vlan
+      
+    register: show_vlan
+
+  - debug: var=show_vlan.stdout_lines
+  

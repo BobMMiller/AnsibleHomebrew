@@ -1,0 +1,23 @@
+---
+############################################################
+# Pulls down the existing vlan database from a cisco switch
+############################################################
+
+- name: Connect to access switches
+  hosts: switches
+  gather_facts: false
+  
+  tasks:
+  - name: show vlan
+    ios_command:
+      commands: 
+        - show vlan
+        - show interface trunk
+
+    register: vlan_output
+
+  - name: save output to local directory
+    copy:
+      content: "{{ vlan_output.stdout }}"
+      dest: /home/bob/ansible/outputs/{{inventory_hostname}}_vlans.ios
+  

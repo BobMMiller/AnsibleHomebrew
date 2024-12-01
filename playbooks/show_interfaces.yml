@@ -1,0 +1,25 @@
+---
+############################################################
+# Pulls down the existing interfaces database from a cisco switch
+############################################################
+
+- name: Connect to access switches
+  hosts: switches
+  gather_facts: false
+  
+  tasks:
+  - name: show interfaces
+    ios_command:
+      commands: 
+        - show version
+        - show interface status | e not
+        - show cdp neighbor
+
+        
+    register: show_interfaces
+
+  - name: save output to local directory
+    copy:
+      content: "{{ show_interfaces.stdout | replace('\\n', '\n') }}"
+      dest: /home/bob/ansible/outputs/{{inventory_hostname}}_interfaces.ios
+  
