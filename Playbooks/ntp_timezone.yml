@@ -20,9 +20,12 @@
      register: get_clock_config
      ios_command:
        commands:
-          - "show running-config | include clock timezone"
-          - "show running-config | include clock summer-time"
+          - show running-config | include clock timezone
+          - show running-config | include clock summer-time
+          - show clock
   #Output final results on the device run and start-config. 
-   - name: Show finally configurations on device
-     debug:
-      var: get_clock_config.stdout
+   - name: save output to local directory
+     copy:
+       content: "{{ get_clock_config.stdout }}"
+       dest: /home/bob/ansible/outputs/{{inventory_hostname}}_ntp.ios
+ 

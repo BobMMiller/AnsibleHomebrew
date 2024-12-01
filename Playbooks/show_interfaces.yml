@@ -11,8 +11,8 @@
   - name: show interfaces
     ios_command:
       commands: 
-        - show interfaces
-        - show interface status
+        - show version
+        - show interface status | e not
         - show cdp neighbor
       
       
