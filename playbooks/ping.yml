@@ -1,6 +1,6 @@
 ---
 - name: test
-  hosts: switches
+  hosts: lab
   gather_facts: false
 
   vars:
@@ -17,5 +17,5 @@
 
   - name: save output to local directory
     copy:
-      content: "{{ output }}"
+      content: "{{ output | replace ('\\n', '\n')}}"
       dest: /home/bob/ansible/outputs/{{inventory_hostname}}ping.ios

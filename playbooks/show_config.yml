@@ -1,0 +1,26 @@
+---
+############################################################
+# Pulls down the existing interfaces database from a cisco switch
+############################################################
+
+- name: Connect to access switches
+  hosts: switches
+  gather_facts: false
+  
+  tasks:
+  - name: show interfaces
+    ios_command:
+      commands: 
+        - show running-config
+
+        
+    register: configuration
+
+  - name: Log potential updates to a local file
+    copy:
+      dest: /home/bob/ansible/outputs/{{inventory_hostname}}_config.ios
+      content: "{{configuration.stdout | replace ('\\n', '\n')}}"
+    # Make sure we don't run into a write concurrency problem
+    throttle: 1
+    delegate_to: localhost
+  

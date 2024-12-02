@@ -1,6 +1,6 @@
 ---
 - name: Configure Clock Timezone and Summertime on Cisco IOS
-  hosts: switches
+  hosts: lab
   connection: network_cli
   gather_facts: false
   tasks:
@@ -11,6 +11,7 @@
             #Configuration commands                         
           - clock timezone CST -6
           - clock summer-time CST recurring
+          - ntp server 192.168.1.20
    #Saving the configurations on start-config
    - name: Save running-config to start-config
      ios_config:
@@ -23,9 +24,10 @@
           - show running-config | include clock timezone
           - show running-config | include clock summer-time
           - show clock
+          - show ntp status
   #Output final results on the device run and start-config. 
    - name: save output to local directory
      copy:
-       content: "{{ get_clock_config.stdout }}"
+       content: "{{ get_clock_config.stdout | replace ('\\n', '\n')}}"
        dest: /home/bob/ansible/outputs/{{inventory_hostname}}_ntp.ios
  

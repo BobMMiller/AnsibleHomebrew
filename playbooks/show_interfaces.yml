@@ -4,7 +4,7 @@
 ############################################################
 
 - name: Connect to access switches
-  hosts: switches
+  hosts: lab
   gather_facts: false
   
   tasks:
@@ -16,10 +16,10 @@
         - show cdp neighbor
 
         
-    register: show_interfaces
+    register: show_commands
 
   - name: save output to local directory
     copy:
-      content: "{{ show_interfaces.stdout | replace('\\n', '\n') }}"
+      content: "{{ show_commands.stdout | replace ('\\n', '\n') }}"
       dest: /home/bob/ansible/outputs/{{inventory_hostname}}_interfaces.ios
   
